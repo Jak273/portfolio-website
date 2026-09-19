@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta
+      name="description"
+      content="Robotics portfolio — Carnegie Mellon University, School of Computer Science"
+    />
+    <title>Jack Gerdsen | Hello!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="Main">
+        <a class="logo" href="#">Jack Gerdsen</a>
+        <ul class="nav-links">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+        <!-- Scrolling photo stripe — JPG, PNG, or WebP; match the extension in each src -->
+        <div class="hero-marquee" aria-hidden="true">
+          <div class="hero-marquee-track">
+            <div class="hero-marquee-group">
+              <img src="images/hero/photo-1.jpg" alt="" loading="eager" />
+              <img src="images/hero/photo-2.jpg" alt="" loading="eager" />
+              <img src="images/hero/photo-3.png" alt="" loading="eager" />
+              <img src="images/hero/photo-4.png" alt="" loading="eager" />
+              <img src="images/hero/photo-5.jpg" alt="" loading="eager" />
+              <img src="images/hero/photo-6.png" alt="" loading="eager" />
+            </div>
+            <div class="hero-marquee-group">
+              <img src="images/hero/photo-1.jpg" alt="" loading="eager" />
+              <img src="images/hero/photo-2.jpg" alt="" loading="eager" />
+              <img src="images/hero/photo-3.png" alt="" loading="eager" />
+              <img src="images/hero/photo-4.png" alt="" loading="eager" />
+              <img src="images/hero/photo-5.jpg" alt="" loading="eager" />
+              <img src="images/hero/photo-6.png" alt="" loading="eager" />
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-content">
+          <div class="hero-text-panel">
+            <p class="eyebrow">Robotics · CMU SCS</p>
+            <h1>
+              Building robots that<br />
+              <span class="accent">see, move, and reason.</span>
+            </h1>
+            <p class="hero-lead">
+              Rising junior in Robotics at Carnegie Mellon. I design and implement
+              perception, planning, and embedded systems for real hardware.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#projects">View projects</a>
+              <a class="btn btn-ghost" href="#contact">Get in touch</a>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <main id="main">
+      <section id="projects" class="section projects">
+        <div class="section-header">
+          <h2>Selected work</h2>
+          <p>
+            Photos and short clips from labs, courses, and personal builds.
+            Replace the placeholders below with your own media.
+          </p>
+        </div>
+
+        <div class="project-grid">
+          <!-- PROJECT 1 — video carousel: add clips to videos/moon-miners-1.mp4, etc. -->
+          <article class="project-card">
+            <div class="media-wrap project-carousel" data-carousel>
+              <div class="project-carousel-viewport">
+                <div class="project-carousel-slide is-active" data-slide="0">
+                  <figure class="project-carousel-figure">
+                    <video class="project-media" controls muted playsinline>
+                      <source src="videos/moon-miners-1.mp4" type="video/mp4" />
+                    </video>
+                    <figcaption class="project-carousel-caption">
+                      Rover excavating regolith during competition run
+                    </figcaption>
+                  </figure>
+                </div>
+                <div class="project-carousel-slide" data-slide="1">
+                  <figure class="project-carousel-figure">
+                    <video class="project-media" controls muted playsinline>
+                      <source src="videos/moon-miners-2.mp4" type="video/mp4" />
+                    </video>
+                    <figcaption class="project-carousel-caption">
+                      Fully autonomous pathing on sandy terrain
+                    </figcaption>
+                  </figure>
+                </div>
+                <div class="project-carousel-slide" data-slide="2">
+                  <div class="project-carousel-embed">
+                    <iframe
+                      class="project-carousel-iframe"
+                      data-youtube-id="fa6a990dFGI"
+                      title="CMU Moon Miners — YouTube"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  class="project-carousel-btn project-carousel-btn--prev"
+                  aria-label="Previous video"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="currentColor" d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  class="project-carousel-btn project-carousel-btn--next"
+                  aria-label="Next video"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="currentColor" d="m10 6-1.41 1.41L13.17 12l-4.58 4.59L10 18l6-6z" />
+                  </svg>
+                </button>
+              </div>
+              <div class="project-carousel-dots" role="tablist" aria-label="Project videos">
+                <button
+                  type="button"
+                  class="project-carousel-dot is-active"
+                  role="tab"
+                  aria-selected="true"
+                  aria-label="Video 1 of 3"
+                  data-goto="0"
+                ></button>
+                <button
+                  type="button"
+                  class="project-carousel-dot"
+                  role="tab"
+                  aria-selected="false"
+                  aria-label="Video 2 of 3"
+                  data-goto="1"
+                ></button>
+                <button
+                  type="button"
+                  class="project-carousel-dot"
+                  role="tab"
+                  aria-selected="false"
+                  aria-label="Video 3 of 3"
+                  data-goto="2"
+                ></button>
+              </div>
+            </div>
+            <div class="project-body">
+              <p class="project-tag">Lunabotics · Controls</p>
+              <h3>CMU Moon Miners</h3>
+              <p>
+                At CMU’s NASA Lunabotics team, we design and build a lunar excavation robot for competition. I am the Controls Lead, responsible for the embedded systems and control stack. In 2026 we were awarded the best first year team, and were the first ever first year team to score autonomous points.
+              </p>
+              <ul class="project-meta">
+                <li>Controls Lead</li>
+                <li>ROS 2 / C++ / Python</li>
+                <li>2025–Present</li>
+              </ul>
+              <a
+                class="project-link"
+                href="https://www.cmu-moon-miners.com/"
+                target="_blank"
+                rel="noopener"
+                >Team site →</a
+              >
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="media-wrap">
+              <div class="project-video-frame">
+                <video class="project-media" controls muted playsinline preload="metadata">
+                  <source src="videos/costar-1.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+            <div class="project-body">
+              <p class="project-tag">Research · Teleoperation</p>
+              <h3>Momentum Robotics Lab</h3>
+              <p>
+                At the Momentum Robotics Lab, I am working on a project called COSTAR designed for long-distance intuitive teleoperation across multiple devices.
+                Here is a demonstration of controlling it via a GELLO controller, other control inputs include web interfaces, and iOS motion controls, designed for use by other labs.
+              </p>
+              <ul class="project-meta">
+                <li>Docker / MuJoCo / Networking</li>
+                <li>2025-2026</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="media-wrap">
+              <div class="project-video-frame">
+                <video
+                  class="project-media"
+                  controls
+                  muted
+                  playsinline
+                  poster="images/project-3-poster.jpg"
+                >
+                  <source src="videos/project-3.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+            <div class="project-body">
+              <p class="project-tag">Coursework · Planning</p>
+              <h3>Third project</h3>
+              <p>
+                Short demo videos (15–60 seconds) work great here — looped
+                highlights of your robot in action.
+              </p>
+              <ul class="project-meta">
+                <li>Gazebo · Nav2</li>
+                <li>2025</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="section about">
+        <div class="about-grid">
+          <div>
+            <h2>About</h2>
+            <p>
+              I'm a robotics software engineer and rising junior at
+              <strong>Carnegie Mellon University</strong>, majoring in Robotics
+              in the School of Computer Science. I'm interested in
+              <!-- edit to match your focus -->
+              perception, motion planning, and bringing algorithms onto real
+              platforms.
+            </p>
+            <p>
+              Outside of class, I <!-- e.g. compete on X team, TA for Y, intern at Z -->.
+              This site is a living portfolio — I'll keep adding projects as I
+              ship them.
+            </p>
+          </div>
+          <aside class="about-facts">
+            <h3>Currently</h3>
+            <dl>
+              <dt>School</dt>
+              <dd>CMU · Robotics (SCS)</dd>
+              <dt>Class year</dt>
+              <dd>Rising junior</dd>
+              <dt>Focus</dt>
+              <dd>Robotics software</dd>
+              <dt>Tools</dt>
+              <dd>ROS 2, Python, C++, Linux</dd>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <h2>Contact</h2>
+        <p>Open to internships, research, and interesting robotics collaborations.</p>
+        <ul class="contact-links">
+          <li>
+            <a href="mailto:jgerdsen@andrew.cmu.edu">jgerdsen@andrew.cmu.edu</a>
+          </li>
+          <li>
+            <a href="https://github.com/Jak273" target="_blank" rel="noopener"
+              >GitHub</a
+            >
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/jackgerdsen" target="_blank" rel="noopener"
+              >LinkedIn</a
+            >
+          </li>
+          <li>
+            <a href="/resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Jack Gerdsen · Built with HTML & CSS</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
