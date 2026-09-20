@@ -1,17 +1,3 @@
-// Footer year
-document.getElementById("year").textContent = new Date().getFullYear();
-
-function buildYouTubeEmbedUrl(videoId) {
-  const params = new URLSearchParams({ rel: "0", modestbranding: "1" });
-  const origin = window.location.origin;
-
-  if (origin && origin !== "null" && !origin.startsWith("file:")) {
-    params.set("origin", origin);
-  }
-
-  return `https://www.youtube-nocookie.com/embed/${videoId}?${params}`;
-}
-
 function isLocalFilePreview() {
   return window.location.protocol === "file:";
 }
@@ -135,28 +121,7 @@ document.querySelectorAll("[data-carousel]").forEach((carousel) => {
       if (video) {
         video.pause();
       }
-
-      const iframe = slide.querySelector(".project-carousel-iframe");
-      if (iframe) {
-        iframe.removeAttribute("src");
-      }
     });
-  }
-
-  function loadEmbedForSlide(slideIndex) {
-    const slide = slides[slideIndex];
-    const iframe = slide?.querySelector(".project-carousel-iframe");
-    const videoId = iframe?.dataset.youtubeId;
-
-    if (!iframe || !videoId || iframe.getAttribute("src")) {
-      return;
-    }
-
-    if (isLocalFilePreview()) {
-      return;
-    }
-
-    iframe.setAttribute("src", buildYouTubeEmbedUrl(videoId));
   }
 
   function goTo(i) {
@@ -173,7 +138,6 @@ document.querySelectorAll("[data-carousel]").forEach((carousel) => {
     });
 
     pauseAllMedia();
-    loadEmbedForSlide(index);
 
     const activeVideo = slides[index]?.querySelector("video.project-media");
     if (activeVideo?.readyState >= 1) {

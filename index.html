@@ -6,9 +6,9 @@
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta
       name="description"
-      content="Robotics portfolio — Carnegie Mellon University, School of Computer Science"
+      content="Jack Gerdsen — CMU Robotics (SCS), Machine Learning minor. Perception, planning, and robot software."
     />
-    <title>Jack Gerdsen | Hello!</title>
+    <title>Jack Gerdsen | Robotics</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,8 +25,12 @@
         <a class="logo" href="#">Jack Gerdsen</a>
         <ul class="nav-links">
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a href="/resume.pdf" target="_blank" rel="noopener">Resume</a>
+          </li>
+          <li><a class="nav-contact" href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -42,6 +46,7 @@
               <img src="images/hero/photo-4.png" alt="" loading="eager" />
               <img src="images/hero/photo-5.jpg" alt="" loading="eager" />
               <img src="images/hero/photo-6.png" alt="" loading="eager" />
+              <img src="images/hero/photo-7.png" alt="" loading="eager" />
             </div>
             <div class="hero-marquee-group">
               <img src="images/hero/photo-1.jpg" alt="" loading="eager" />
@@ -50,6 +55,7 @@
               <img src="images/hero/photo-4.png" alt="" loading="eager" />
               <img src="images/hero/photo-5.jpg" alt="" loading="eager" />
               <img src="images/hero/photo-6.png" alt="" loading="eager" />
+              <img src="images/hero/photo-7.png" alt="" loading="eager" />
             </div>
           </div>
         </div>
@@ -62,8 +68,8 @@
               <span class="accent">see, move, and reason.</span>
             </h1>
             <p class="hero-lead">
-              Rising junior in Robotics at Carnegie Mellon. I design and implement
-              perception, planning, and embedded systems for real hardware.
+              Junior studying Robotics and Machine Learning at Carnegie Mellon. I design and implement
+              perception, planning, and embedded systems for robot software.
             </p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="#projects">View projects</a>
@@ -76,11 +82,7 @@
     <main id="main">
       <section id="projects" class="section projects">
         <div class="section-header">
-          <h2>Selected work</h2>
-          <p>
-            Photos and short clips from labs, courses, and personal builds.
-            Replace the placeholders below with your own media.
-          </p>
+          <h2>Projects</h2>
         </div>
 
         <div class="project-grid">
@@ -101,24 +103,22 @@
                 <div class="project-carousel-slide" data-slide="1">
                   <figure class="project-carousel-figure">
                     <video class="project-media" controls muted playsinline>
+                      <source src="videos/rvizdemovideo.mp4" type="video/mp4" />
+                    </video>
+                    <figcaption class="project-carousel-caption">
+                      Simulation demo using LiDAR-based SLAM to localize and navigate.
+                    </figcaption>
+                  </figure>
+                </div>
+                <div class="project-carousel-slide" data-slide="2">
+                  <figure class="project-carousel-figure">
+                    <video class="project-media" controls muted playsinline>
                       <source src="videos/moon-miners-2.mp4" type="video/mp4" />
                     </video>
                     <figcaption class="project-carousel-caption">
                       Fully autonomous pathing on sandy terrain
                     </figcaption>
                   </figure>
-                </div>
-                <div class="project-carousel-slide" data-slide="2">
-                  <div class="project-carousel-embed">
-                    <iframe
-                      class="project-carousel-iframe"
-                      data-youtube-id="fa6a990dFGI"
-                      title="CMU Moon Miners — YouTube"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerpolicy="strict-origin-when-cross-origin"
-                      allowfullscreen
-                    ></iframe>
-                  </div>
                 </div>
                 <button
                   type="button"
@@ -170,20 +170,36 @@
               <p class="project-tag">Lunabotics · Controls</p>
               <h3>CMU Moon Miners</h3>
               <p>
-                At CMU’s NASA Lunabotics team, we design and build a lunar excavation robot for competition. I am the Controls Lead, responsible for the embedded systems and control stack. In 2026 we were awarded the best first year team, and were the first ever first year team to score autonomous points.
+                Software Controls Lead on CMU's NASA Lunabotics team, an
+                80-person team unified in goal of building an autonomous lunar excavation rover.
+                I lead a 20-person software subteam, from GitHub workflows and
+                deadlines to the ROS&nbsp;2 stack that wires high-level planning
+                down to simulated motor control. We were the first rookie team
+                in Lunabotics history to score autonomous points. I have been
+                integrating LiDAR-based SLAM for obstacle detection and
+                navigation.
               </p>
               <ul class="project-meta">
-                <li>Controls Lead</li>
-                <li>ROS 2 / C++ / Python</li>
-                <li>2025–Present</li>
+                <li>Software Controls Lead</li>
+                <li>ROS 2 · LiDAR SLAM</li>
+                <li>Dec 2025–Present</li>
               </ul>
-              <a
-                class="project-link"
-                href="https://www.cmu-moon-miners.com/"
-                target="_blank"
-                rel="noopener"
-                >Team site →</a
-              >
+              <div class="project-links">
+                <a
+                  class="project-link"
+                  href="https://www.cmu-moon-miners.com/"
+                  target="_blank"
+                  rel="noopener"
+                  >Team site →</a
+                >
+                <a
+                  class="project-link"
+                  href="https://www.youtube.com/watch?v=fa6a990dFGI"
+                  target="_blank"
+                  rel="noopener"
+                  >Proof of life →</a
+                >
+              </div>
             </div>
           </article>
 
@@ -199,12 +215,18 @@
               <p class="project-tag">Research · Teleoperation</p>
               <h3>Momentum Robotics Lab</h3>
               <p>
-                At the Momentum Robotics Lab, I am working on a project called COSTAR designed for long-distance intuitive teleoperation across multiple devices.
-                Here is a demonstration of controlling it via a GELLO controller, other control inputs include web interfaces, and iOS motion controls, designed for use by other labs.
+                Research assistant on COSTAR, a long-range teleoperation system
+                for multiple 7-DoF arms. I built modular interfaces for iOS motion
+                controls, a web UI, and a GELLO controller, and ran the
+                distributed stack with Zenoh and Docker so other labs could use
+                it. Control software and fail-safes were prototyped in
+                MuJoCo/Robosuite before hardware. I collaborated with a
+                six-person lab team on a paper for IROS 2026.
               </p>
               <ul class="project-meta">
-                <li>Docker / MuJoCo / Networking</li>
-                <li>2025-2026</li>
+                <li>Zenoh · Docker · iOS</li>
+                <li>MuJoCo / Robosuite</li>
+                <li>Jun 2025–May 2026</li>
               </ul>
             </div>
           </article>
@@ -212,64 +234,165 @@
           <article class="project-card">
             <div class="media-wrap">
               <div class="project-video-frame">
-                <video
-                  class="project-media"
-                  controls
-                  muted
-                  playsinline
-                  poster="images/project-3-poster.jpg"
-                >
-                  <source src="videos/project-3.mp4" type="video/mp4" />
+                <video class="project-media" controls muted playsinline preload="metadata">
+                  <source src="videos/magicmirrordemo.mp4" type="video/mp4" />
                 </video>
               </div>
             </div>
             <div class="project-body">
-              <p class="project-tag">Coursework · Planning</p>
-              <h3>Third project</h3>
+              <p class="project-tag">Personal · Computer Vision</p>
+              <h3>Magic Mirror Optical Illusion</h3>
               <p>
-                Short demo videos (15–60 seconds) work great here — looped
-                highlights of your robot in action.
+                A personal summer project that was mostly an exercise in pinhole camera
+                mathematics, tracking your eyes to make a pseudo-3D effect on a normal screen. I created this
+                as a base for a future Raspberry Pi-based magic mirror design with lifestyle widgets with a
+                3D background effect.
               </p>
               <ul class="project-meta">
-                <li>Gazebo · Nav2</li>
-                <li>2025</li>
+                <li>Camera Geometry</li>
+                <li>Python</li>
+                <li>2026</li>
               </ul>
             </div>
           </article>
         </div>
       </section>
 
+      <section id="experience" class="section experience">
+        <div class="section-header">
+          <h2>Experience</h2>
+          <p>
+            Research, teaching, and club work alongside the projects above.
+          </p>
+        </div>
+
+        <div class="experience-grid">
+          <article class="experience-card">
+            <p class="experience-tag">Research · Agricultural robotics</p>
+            <h3>Kantor Lab @ CMU</h3>
+            <p class="experience-role">Research Assistant · Jun 2026–Present</p>
+            <p>
+              Collecting and curating field datasets, 3D scans, and point clouds of grape clusters used to
+              train machine learning models for autonomous harvesting. The work
+              supports perception and picking algorithms with real vineyard
+              examples, not just lab data.
+            </p>
+          </article>
+
+          <article class="experience-card">
+            <p class="experience-tag">Teaching · Computer vision</p>
+            <h3>16-385 Computer Vision</h3>
+            <p class="experience-role">Teaching Assistant · Aug 2026–Present</p>
+            <p>
+              Course staff for CMU's Computer Vision class. I help students
+              through office hours and feedback on image processing, feature
+              detection, RANSAC, and geometric vision.
+            </p>
+          </article>
+
+          <article class="experience-card">
+            <p class="experience-tag">Research · Mobile / Bluetooth</p>
+            <h3>CREATE Lab @ CMU</h3>
+            <p class="experience-role">Research Assistant · Feb 2025–May 2025</p>
+            <p>
+              Built Android UIs in Jetpack Compose that react to Bluetooth
+              devices, and refactored Kotlin apps that interface with children's
+              toys. Deployed those interfaces in Pittsburgh-area learning
+              centers to gather user feedback.
+            </p>
+          </article>
+
+          <article class="experience-card">
+            <p class="experience-tag">Club · Simulation</p>
+            <h3>CMU RoboClub</h3>
+            <p class="experience-role">Member · Sep 2024–Present</p>
+            <p>
+              Built simulation adapters that redirect ROS components into Gazebo
+              for hardware-free testing, and created dynamic quadruped models to
+              prototype control code.
+            </p>
+          </article>
+        </div>
+      </section>
+
       <section id="about" class="section about">
-        <div class="about-grid">
-          <div>
-            <h2>About</h2>
-            <p>
-              I'm a robotics software engineer and rising junior at
-              <strong>Carnegie Mellon University</strong>, majoring in Robotics
-              in the School of Computer Science. I'm interested in
-              <!-- edit to match your focus -->
-              perception, motion planning, and bringing algorithms onto real
-              platforms.
-            </p>
-            <p>
-              Outside of class, I <!-- e.g. compete on X team, TA for Y, intern at Z -->.
-              This site is a living portfolio — I'll keep adding projects as I
-              ship them.
-            </p>
+        <div class="about-inner">
+          <div class="about-grid">
+            <div>
+              <h2>About</h2>
+              <p>
+                I'm a junior in the
+                <strong>School of Computer Science</strong> at
+                <strong>Carnegie Mellon University</strong>, majoring in
+                Robotics with a minor in Machine Learning. I care about
+                perception, motion planning, and getting robot software onto
+                real platforms, from lunar excavation to vineyard harvesting.
+              </p>
+              <p>
+                Coursework includes Computer Vision, Robot Planning Techniques,
+                Feedback &amp; Control, Intelligent Robot Systems, and Robot
+                Kinematics.
+              </p>
+              <p>
+                Outside of class I lead software for Moon Miners, TA Computer
+                Vision, and work in the Kantor Lab, and rock climb on occasion.
+              </p>
+            </div>
+            <aside class="about-facts">
+              <h3>Currently</h3>
+              <dl>
+                <dt>School</dt>
+                <dd>CMU SCS · Robotics, ML minor</dd>
+                <dt>Graduating</dt>
+                <dd>May 2028</dd>
+                <dt>Now</dt>
+                <dd>Kantor Lab · CV TA · Moon Miners</dd>
+                <dt>Stack</dt>
+                <dd>ROS 2, Python, C++</dd>
+              </dl>
+            </aside>
           </div>
-          <aside class="about-facts">
-            <h3>Currently</h3>
-            <dl>
-              <dt>School</dt>
-              <dd>CMU · Robotics (SCS)</dd>
-              <dt>Class year</dt>
-              <dd>Rising junior</dd>
-              <dt>Focus</dt>
-              <dd>Robotics software</dd>
-              <dt>Tools</dt>
-              <dd>ROS 2, Python, C++, Linux</dd>
-            </dl>
-          </aside>
+
+          <div class="skills">
+            <h3>Skills</h3>
+            <div class="skill-groups">
+              <div>
+                <h4>Software</h4>
+                <ul class="skill-list">
+                  <li>C / C++</li>
+                  <li>Python</li>
+                  <li>PyTorch</li>
+                  <li>ROS 2</li>
+                  <li>Java</li>
+                  <li>Kotlin</li>
+                  <li>Swift</li>
+                  <li>git</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Robotics</h4>
+                <ul class="skill-list">
+                  <li>Motion planning</li>
+                  <li>Controls</li>
+                  <li>State estimation</li>
+                  <li>Sensor fusion</li>
+                  <li>Computer vision</li>
+                  <li>Gazebo / MuJoCo</li>
+                  <li>Docker</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Hardware</h4>
+                <ul class="skill-list">
+                  <li>Onshape</li>
+                  <li>Fusion 360</li>
+                  <li>CNC</li>
+                  <li>3D printing</li>
+                  <li>Laser cutting</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -278,7 +401,7 @@
         <p>Open to internships, research, and interesting robotics collaborations.</p>
         <ul class="contact-links">
           <li>
-            <a href="mailto:jgerdsen@andrew.cmu.edu">jgerdsen@andrew.cmu.edu</a>
+            <a href="mailto:jack@jacksongerdsen.com">jack@jacksongerdsen.com</a>
           </li>
           <li>
             <a href="https://github.com/Jak273" target="_blank" rel="noopener"
@@ -298,7 +421,7 @@
     </main>
 
     <footer class="site-footer">
-      <p>© <span id="year"></span> Jack Gerdsen · Built with HTML & CSS</p>
+      <p>How did we get here?</p>
     </footer>
 
     <script src="script.js"></script>
