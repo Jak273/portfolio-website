@@ -6,7 +6,7 @@
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta
       name="description"
-      content="Jack Gerdsen — CMU Robotics (SCS), Machine Learning minor. Perception, planning, and robot software."
+      content="Jack Gerdsen — CMU Robotics (SCS), Machine Learning minor. Autonomy, perception, and control. Seeking a summer 2027 robotics software engineering internship."
     />
     <title>Jack Gerdsen | Robotics</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -68,8 +68,9 @@
               <span class="accent">see, move, and reason.</span>
             </h1>
             <p class="hero-lead">
-              Junior studying Robotics and Machine Learning at Carnegie Mellon. I design and implement
-              perception, planning, and embedded systems for robot software.
+              Junior studying Robotics and Machine Learning at Carnegie Mellon,
+              working on autonomy, perception, and control. Seeking a summer 2027
+              robotics software engineering internship.
             </p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="#projects">View projects</a>
@@ -171,17 +172,19 @@
               <h3>CMU Moon Miners</h3>
               <p>
                 Software Controls Lead on CMU's NASA Lunabotics team, an
-                80-person team unified in goal of building an autonomous lunar excavation rover.
-                I lead a 20-person software subteam, from GitHub workflows and
-                deadlines to the ROS&nbsp;2 stack that wires high-level planning
-                down to simulated motor control. We were the first rookie team
-                in Lunabotics history to score autonomous points. I have been
-                integrating LiDAR-based SLAM for obstacle detection and
-                navigation.
+                80-person team unified in goal of building an autonomous lunar
+                excavation rover. I direct 20 software members across sub-teams,
+                owning the GitHub workflow, code review, and release deadlines,
+                and wrote the C++ and Python ROS&nbsp;2 autonomy foundation so
+                every sub-team runs identical nodes in simulation and on
+                hardware. We delivered the first autonomous scoring run by any
+                rookie team in Lunabotics history and were named Best Rookie
+                Team 2026. I have been integrating LiDAR point-cloud SLAM for
+                obstacle detection, localization, and navigation.
               </p>
               <ul class="project-meta">
                 <li>Software Controls Lead</li>
-                <li>ROS 2 · LiDAR SLAM</li>
+                <li>ROS 2 · C++ · LiDAR SLAM</li>
                 <li>Dec 2025–Present</li>
               </ul>
               <div class="project-links">
@@ -216,16 +219,16 @@
               <h3>Momentum Robotics Lab</h3>
               <p>
                 Research assistant on COSTAR, a long-range teleoperation system
-                for multiple 7-DoF arms. I built modular interfaces for iOS motion
-                controls, a web UI, and a GELLO controller, and ran the
-                distributed stack with Zenoh and Docker so other labs could use
-                it. Control software and fail-safes were prototyped in
-                MuJoCo/Robosuite before hardware. I collaborated with a
-                six-person lab team on a paper for IROS 2026.
+                for 7-DoF manipulators. I built a modular iOS interface in Swift
+                that drives several arm models from one controller, replacing the
+                separate app each arm used to need, and packaged the stack with
+                Zenoh and Docker so operators could run it off-site without
+                rebuilding from source. Real-time control and fail-safes were
+                validated in MuJoCo before any hardware run.
               </p>
               <ul class="project-meta">
-                <li>Zenoh · Docker · iOS</li>
-                <li>MuJoCo / Robosuite</li>
+                <li>Swift · Zenoh · Docker</li>
+                <li>MuJoCo</li>
                 <li>Jun 2025–May 2026</li>
               </ul>
             </div>
@@ -303,13 +306,14 @@
           </article>
 
           <article class="experience-card">
-            <p class="experience-tag">Club · Simulation</p>
+            <p class="experience-tag">Club · Simulation and controls</p>
             <h3>CMU RoboClub</h3>
-            <p class="experience-role">Member · Sep 2024–Present</p>
+            <p class="experience-role">Member, Simulation and Controls · Sep 2024–Present</p>
             <p>
-              Built simulation adapters that redirect ROS components into Gazebo
-              for hardware-free testing, and created dynamic quadruped models to
-              prototype control code.
+              Created simulation adapters that redirect ROS&nbsp;2 components
+              into Gazebo so members can test control code with no hardware, and
+              modeled dynamic quadrupeds to prototype gait and balance
+              controllers before anything was fabricated.
             </p>
           </article>
         </div>
@@ -335,7 +339,8 @@
               </p>
               <p>
                 Outside of class I lead software for Moon Miners, TA Computer
-                Vision, and work in the Kantor Lab, and rock climb on occasion.
+                Vision, work in the Kantor Lab, and push for Fringe in CMU's
+                intramural buggy races. I rock climb on occasion.
               </p>
             </div>
             <aside class="about-facts">
@@ -345,8 +350,12 @@
                 <dd>CMU SCS · Robotics, ML minor</dd>
                 <dt>Graduating</dt>
                 <dd>May 2028</dd>
+                <dt>Seeking</dt>
+                <dd>Summer 2027 robotics software internship</dd>
                 <dt>Now</dt>
                 <dd>Kantor Lab · CV TA · Moon Miners</dd>
+                <dt>Work authorization</dt>
+                <dd>U.S. citizen, no sponsorship required</dd>
                 <dt>Stack</dt>
                 <dd>ROS 2, Python, C++</dd>
               </dl>
@@ -357,38 +366,56 @@
             <h3>Skills</h3>
             <div class="skill-groups">
               <div>
-                <h4>Software</h4>
+                <h4>Languages</h4>
                 <ul class="skill-list">
-                  <li>C / C++</li>
+                  <li>C++</li>
                   <li>Python</li>
-                  <li>PyTorch</li>
-                  <li>ROS 2</li>
-                  <li>Java</li>
-                  <li>Kotlin</li>
+                  <li>C</li>
                   <li>Swift</li>
-                  <li>git</li>
+                  <li>Kotlin</li>
                 </ul>
               </div>
               <div>
                 <h4>Robotics</h4>
                 <ul class="skill-list">
+                  <li>ROS 2</li>
+                  <li>Gazebo</li>
+                  <li>MuJoCo</li>
+                  <li>Teleoperation</li>
+                  <li>Manipulation</li>
                   <li>Motion planning</li>
-                  <li>Controls</li>
-                  <li>State estimation</li>
-                  <li>Sensor fusion</li>
-                  <li>Computer vision</li>
-                  <li>Gazebo / MuJoCo</li>
-                  <li>Docker</li>
+                  <li>Kinematics</li>
+                  <li>Feedback control</li>
                 </ul>
               </div>
               <div>
-                <h4>Hardware</h4>
+                <h4>Perception &amp; ML</h4>
                 <ul class="skill-list">
-                  <li>Onshape</li>
-                  <li>Fusion 360</li>
-                  <li>CNC</li>
-                  <li>3D printing</li>
-                  <li>Laser cutting</li>
+                  <li>SLAM</li>
+                  <li>Computer vision</li>
+                  <li>LiDAR</li>
+                  <li>Point clouds</li>
+                  <li>Sensor fusion</li>
+                  <li>State estimation</li>
+                  <li>Kalman filtering</li>
+                  <li>PyTorch</li>
+                  <li>Dataset curation</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Tools</h4>
+                <ul class="skill-list">
+                  <li>Linux</li>
+                  <li>Git / GitHub</li>
+                  <li>Docker</li>
+                  <li>NumPy</li>
+                  <li>Nav2</li>
+                  <li>RViz</li>
+                  <li>Zenoh</li>
+                  <li>OpenCV</li>
+                  <li>MoveIt</li>
+                  <li>Isaac Sim</li>
+                  <li>Jetpack Compose</li>
                 </ul>
               </div>
             </div>

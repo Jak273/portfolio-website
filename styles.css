@@ -763,7 +763,7 @@ img.project-media {
 
 @media (min-width: 768px) {
   .skill-groups {
-    grid-template-columns: 1.3fr 1.4fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
     gap: 1.75rem;
   }
 }

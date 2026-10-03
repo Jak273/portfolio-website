@@ -107,6 +107,73 @@ document.querySelectorAll("video.project-media").forEach((video) => {
   });
 });
 
+// Scroll-triggered playback: a clip starts when it is mostly on screen and
+// stops when it leaves. A manual pause sticks until the viewer presses play.
+const AUTOPLAY_RATIO = 0.6;
+
+function prefersReducedMotion() {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+function isOnActiveSlide(video) {
+  const slide = video.closest(".project-carousel-slide");
+  return !slide || slide.classList.contains("is-active");
+}
+
+function autoPause(video) {
+  if (video.paused) {
+    return;
+  }
+  video.dataset.autoPause = "1";
+  video.pause();
+}
+
+function autoPlayIfReady(video) {
+  if (prefersReducedMotion()) {
+    return;
+  }
+  if (video.dataset.inView !== "1" || video.dataset.userPaused === "1") {
+    return;
+  }
+  if (!isOnActiveSlide(video)) {
+    return;
+  }
+  video.play().catch(() => {});
+}
+
+const autoplayObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      const video = entry.target;
+
+      if (entry.intersectionRatio >= AUTOPLAY_RATIO) {
+        video.dataset.inView = "1";
+        autoPlayIfReady(video);
+      } else {
+        video.dataset.inView = "0";
+        autoPause(video);
+      }
+    });
+  },
+  { threshold: [0, AUTOPLAY_RATIO] }
+);
+
+document.querySelectorAll("video.project-media").forEach((video) => {
+  video.addEventListener("pause", () => {
+    if (video.dataset.autoPause === "1") {
+      delete video.dataset.autoPause;
+      return;
+    }
+    video.dataset.userPaused = "1";
+  });
+
+  video.addEventListener("play", () => {
+    delete video.dataset.userPaused;
+  });
+
+  autoplayObserver.observe(video);
+});
+
 // Project video carousels
 document.querySelectorAll("[data-carousel]").forEach((carousel) => {
   const slides = carousel.querySelectorAll(".project-carousel-slide");
@@ -119,7 +186,7 @@ document.querySelectorAll("[data-carousel]").forEach((carousel) => {
     slides.forEach((slide) => {
       const video = slide.querySelector("video");
       if (video) {
-        video.pause();
+        autoPause(video);
       }
     });
   }
@@ -142,6 +209,10 @@ document.querySelectorAll("[data-carousel]").forEach((carousel) => {
     const activeVideo = slides[index]?.querySelector("video.project-media");
     if (activeVideo?.readyState >= 1) {
       ensureVideoSeekingWorks(activeVideo);
+    }
+    if (activeVideo) {
+      delete activeVideo.dataset.userPaused;
+      autoPlayIfReady(activeVideo);
     }
   }
 
